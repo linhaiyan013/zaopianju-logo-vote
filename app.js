@@ -42,6 +42,7 @@
   let activeStore = null;
   let unsubscribeCloud = null;
   let cloudFallbackMessage = "";
+  let adminStartupMessage = "";
   let state = {
     votes: normalizeVotes(config.initialVotes),
     votedOption: storage.get(`${storagePrefix}:votedOption`) || "",
@@ -104,7 +105,9 @@
     elements.adminMeaningInput.value = state.meaning || defaultMeaning;
     renderAdminOptionsEditor();
 
-    if (activeStore.isCloud) {
+    if (adminStartupMessage) {
+      setAdminStatus(adminStartupMessage, { persist: true });
+    } else if (activeStore.isCloud) {
       setAdminStatus("当前为云端同步模式。保存后手机和电脑会同步更新。", { persist: true });
     } else if (cloudFallbackMessage) {
       setAdminStatus(cloudFallbackMessage, { persist: true });
@@ -201,7 +204,16 @@
       return;
     }
 
+    if (isAdminMode && hasLocalDraft()) {
+      adminStartupMessage = "已检测到本机编辑草稿。确认内容无误后，点击保存寓意或保存方案即可同步到云端。";
+      return;
+    }
+
     applyPollContent(poll);
+  }
+
+  function hasLocalDraft() {
+    return Boolean(storage.get(meaningKey) || storage.get(optionsKey));
   }
 
   function setupRealtimeSync() {
