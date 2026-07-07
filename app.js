@@ -897,7 +897,7 @@
   }
 
   function sumVotes(votes) {
-    return Object.values(votes).reduce((total, value) => total + value, 0);
+    return options.reduce((total, option) => total + (votes[option.id] || 0), 0);
   }
 
   function getPercent(count, total) {
