@@ -342,7 +342,9 @@
 
   function render() {
     const total = sumVotes(state.votes);
-    elements.totalVotes.textContent = String(total);
+    if (elements.totalVotes) {
+      elements.totalVotes.textContent = String(total);
+    }
     elements.resultsTotal.textContent = `${total} 票`;
     renderCards(total);
     renderResults(total);
