@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">方案 B Logo 占位图</title>
+  <desc id="desc">亲和可爱的用户感 Logo 占位图</desc>
+  <rect width="512" height="512" rx="116" fill="#fff1f6"/>
+  <rect x="118" y="152" width="276" height="210" rx="64" fill="#ffffff" stroke="#d94f78" stroke-width="18"/>
+  <path d="M190 152l30-46h74l30 46" fill="none" stroke="#d94f78" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="255" r="62" fill="#ffe1ea" stroke="#d94f78" stroke-width="16"/>
+  <circle cx="236" cy="238" r="9" fill="#302832"/>
+  <circle cx="276" cy="238" r="9" fill="#302832"/>
+  <path d="M232 272c16 16 34 16 50 0" fill="none" stroke="#302832" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="351" cy="202" r="16" fill="#ef8aa7"/>
+  <text x="256" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="800" fill="#b93661">ZPJ</text>
+</svg>

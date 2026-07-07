@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff7fb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="造片局 Logo 投票" />
+    <title>造片局 Logo 投票</title>
+    <link rel="stylesheet" href="./styles.css?v=cloud-sync-9" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="brand-mark">造片局</p>
+        <h1 id="page-title">造片局 Logo 投票</h1>
+        <p class="subtitle" id="page-subtitle">帮我们选出最适合 AI 摄影小程序的 Logo</p>
+        <p class="intro" id="page-intro">
+          我们正在为『造片局』选择最终 Logo。它未来会用于小程序头像、首页、课程、作品展示和品牌传播。请你根据第一眼感受，选出你觉得最有记忆点、最适合 AI 摄影平台的那一个。
+        </p>
+
+        <section class="meaning-panel" aria-label="Logo 整体寓意">
+          <strong>整体寓意</strong>
+          <p id="page-meaning">
+            我们希望这个 Logo 能代表「AI 生成影像」和「照片创作」的结合，也能承载 AI 写真、修图、课程、作品展示和视觉变现平台的长期品牌感。
+          </p>
+        </section>
+
+        <section class="admin-panel is-hidden" id="admin-panel" aria-label="发起方填写区" hidden>
+          <div class="admin-heading">
+            <strong>发起方填写</strong>
+            <span>普通投票页不显示</span>
+          </div>
+          <label for="admin-meaning-input">开头寓意</label>
+          <textarea id="admin-meaning-input" rows="4"></textarea>
+          <div class="admin-actions">
+            <button class="admin-button primary" id="save-meaning-button" type="button">保存寓意</button>
+            <button class="admin-button" id="reset-meaning-button" type="button">恢复默认</button>
+          </div>
+          <p class="admin-help">
+            这里的内容只有发起方链接会显示，普通投票链接不会显示填写区。
+          </p>
+
+          <div class="admin-divider"></div>
+
+          <div class="admin-heading compact">
+            <strong>Logo 方案</strong>
+            <span>可增删、可上传图片</span>
+          </div>
+          <div class="admin-options-editor" id="admin-options-editor"></div>
+          <div class="admin-actions three">
+            <button class="admin-button primary" id="save-options-button" type="button">保存方案</button>
+            <button class="admin-button" id="add-option-button" type="button">新增方案</button>
+            <button class="admin-button" id="reset-options-button" type="button">恢复默认</button>
+          </div>
+          <p class="admin-help">
+            手机端可从相册选择 Logo。静态版会保存到当前浏览器；正式发布给别人前，建议把最终图片放进 assets/logos 并写回配置。
+          </p>
+          <p class="admin-status" id="admin-status" aria-live="polite"></p>
+        </section>
+
+        <section class="total-panel" aria-label="总投票人数">
+          <span>当前参与人数</span>
+          <strong id="total-votes">0</strong>
+        </section>
+      </header>
+
+      <section class="options-grid" id="options-grid" aria-label="Logo 方案列表"></section>
+
+      <section class="bottom-note" aria-label="投票提示">
+        <p id="footer-note">没有标准答案，第一眼喜欢哪个就选哪个～</p>
+      </section>
+
+      <details class="results-panel" id="results-panel" open>
+        <summary>
+          <span>票数统计</span>
+          <strong id="results-total">0 票</strong>
+        </summary>
+        <div class="results-list" id="results-list"></div>
+      </details>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="image-modal" id="image-modal" role="dialog" aria-modal="true" aria-label="图片放大预览" hidden>
+      <button class="image-modal-backdrop" type="button" data-close-zoom aria-label="关闭图片预览"></button>
+      <section class="image-modal-dialog">
+        <div class="image-modal-header">
+          <strong id="image-modal-title">图片预览</strong>
+          <button class="image-modal-close" type="button" data-close-zoom>关闭</button>
+        </div>
+        <img id="image-modal-img" alt="图片放大预览" />
+      </section>
+    </div>
+
+    <script src="./vendor/supabase.js?v=cloud-sync-9"></script>
+    <script>
+      if (!window.supabase && typeof supabase !== "undefined") {
+        window.supabase = supabase;
+      }
+    </script>
+    <script src="./config.js?v=cloud-sync-9"></script>
+    <script src="./logo-options.js?v=cloud-sync-9"></script>
+    <script src="./app.js?v=cloud-sync-9"></script>
+  </body>
+</html>

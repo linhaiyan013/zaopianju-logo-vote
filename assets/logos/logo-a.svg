@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">方案 A Logo 占位图</title>
+  <desc id="desc">简洁的 AI 摄影感 Logo 占位图</desc>
+  <rect width="512" height="512" rx="96" fill="#fff4f7"/>
+  <circle cx="256" cy="236" r="132" fill="#ffffff" stroke="#d94f78" stroke-width="20"/>
+  <path d="M256 104a132 132 0 0 1 122 82H270L218 104h38Z" fill="#d94f78"/>
+  <path d="M132 224a132 132 0 0 1 73-106l54 92-54 92-73-78Z" fill="#ef8aa7"/>
+  <path d="M378 286a132 132 0 0 1-121 82l54-92h106l-39 10Z" fill="#b93661"/>
+  <circle cx="256" cy="236" r="45" fill="#302832"/>
+  <circle cx="276" cy="216" r="12" fill="#ffffff"/>
+  <text x="256" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#302832">ZPJ</text>
+</svg>

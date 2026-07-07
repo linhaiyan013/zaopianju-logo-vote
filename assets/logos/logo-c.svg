@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">方案 C Logo 占位图</title>
+  <desc id="desc">专业平台感 Logo 占位图</desc>
+  <rect width="512" height="512" rx="84" fill="#fbf8fa"/>
+  <path d="M128 176l128-74 128 74v148l-128 74-128-74V176Z" fill="#ffffff" stroke="#302832" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M256 102v148l128-74" fill="none" stroke="#d94f78" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 250L128 176" fill="none" stroke="#ef8aa7" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 250v148" fill="none" stroke="#b93661" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="250" r="42" fill="#302832"/>
+  <circle cx="271" cy="235" r="11" fill="#ffffff"/>
+  <text x="256" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="800" fill="#302832">ZAOPIANJU</text>
+</svg>
